@@ -1,98 +1,190 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.12.5 on darwin)" generated="2025-02-11T21:35:50.667522" rpa="false" schemaversion="5">
-<suite id="s1" name="Start" source="/Users/noesis/PROJETOS/APPS/robot-web-tests/robotWeb/start.robot">
-<test id="s1-t1" name="Logar com User e Password Corretos" line="26">
+<robot generator="Robot 7.0 (Python 3.12.5 on darwin)" generated="2025-02-14T18:53:38.147593" rpa="false" schemaversion="5">
+<suite id="s1" name="Formulario" source="/Users/noesis/PROJETOS/APPS/robot-web-tests/robotWeb/formulario.robot">
+<test id="s1-t1" name="Preencher formulario" line="23">
+<kw name="Get Current Date" owner="DateTime">
+<msg time="2025-02-14T18:53:38.234116" level="INFO">${DATA_SISTEMA} = 02-14-25</msg>
+<var>${DATA_SISTEMA}</var>
+<arg>result_format=%m-%d-%y</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<status status="PASS" start="2025-02-14T18:53:38.233995" elapsed="0.000136"/>
+</kw>
 <kw name="Acessar a aplicacao">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-02-11T21:35:50.766428" level="INFO">Opening browser 'chrome' to base url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'.</msg>
-<arg>https://opensource-demo.orangehrmlive.com/web/index.php/auth/login</arg>
+<msg time="2025-02-14T18:53:38.234462" level="INFO">Opening browser 'chrome' to base url 'https://testautomationpractice.blogspot.com/'.</msg>
+<arg>https://testautomationpractice.blogspot.com/</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-02-11T21:35:50.766337" elapsed="5.484213"/>
+<status status="PASS" start="2025-02-14T18:53:38.234388" elapsed="4.681929"/>
 </kw>
 <kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
-<arg>xpath://input[@name="username"]</arg>
-<arg>10</arg>
+<arg>xpath://span[text()="For Selenium, Cypress &amp; Playwright"]</arg>
+<arg>5</arg>
 <doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" start="2025-02-11T21:35:56.251277" elapsed="0.585320"/>
+<status status="PASS" start="2025-02-14T18:53:42.917153" elapsed="0.026770"/>
+</kw>
+<status status="PASS" start="2025-02-14T18:53:38.234258" elapsed="4.709788"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-02-11T21:35:56.837017" level="INFO">Typing text 'Admin' into text field 'xpath://input[@name="username"]'.</msg>
-<arg>xpath://input[@name="username"]</arg>
-<arg>${login}</arg>
+<msg time="2025-02-14T18:53:42.944600" level="INFO">Typing text 'Cecilia Andrade' into text field 'xpath://input[@id="name"]'.</msg>
+<arg>xpath://input[@id="name"]</arg>
+<arg>${name}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-11T21:35:56.836773" elapsed="0.122820"/>
+<status status="PASS" start="2025-02-14T18:53:42.944247" elapsed="0.169576"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-02-11T21:35:56.959889" level="INFO">Typing text 'admin123' into text field 'xpath://input[@name="password"]'.</msg>
-<arg>xpath://input[@name="password"]</arg>
-<arg>${password}</arg>
+<msg time="2025-02-14T18:53:43.115011" level="INFO">Typing text 'cecilia@gmail.com' into text field 'xpath://input[@id="email"]'.</msg>
+<arg>xpath://input[@id="email"]</arg>
+<arg>${email}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-11T21:35:56.959716" elapsed="0.043291"/>
+<status status="PASS" start="2025-02-14T18:53:43.114545" elapsed="0.058865"/>
 </kw>
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-02-11T21:35:57.003250" level="INFO">Clicking button 'xpath://button[text()=" Login "]'.</msg>
-<arg>xpath://button[text()=" Login "]</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-11T21:35:57.003130" elapsed="0.934448"/>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-14T18:53:43.173772" level="INFO">Typing text '999999999' into text field 'xpath://input[@id="phone"]'.</msg>
+<arg>xpath://input[@id="phone"]</arg>
+<arg>${phone}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-14T18:53:43.173631" elapsed="0.036120"/>
 </kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-02-11T21:36:00.940521" level="INFO">Slept 3 seconds.</msg>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-14T18:53:43.210036" level="INFO">Typing text 'Rua Av Rio Branco, N 1' into text field 'xpath://textarea[@id="textarea"]'.</msg>
+<arg>xpath://textarea[@id="textarea"]</arg>
+<arg>${textarea}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-14T18:53:43.209897" elapsed="0.048479"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-14T18:53:43.258699" level="INFO">Clicking element 'xpath://input[@id="male"]'.</msg>
+<arg>xpath://input[@id="male"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-14T18:53:43.258561" elapsed="0.045299"/>
+</kw>
+<kw name="Select Checkbox" owner="SeleniumLibrary">
+<msg time="2025-02-14T18:53:43.304123" level="INFO">Selecting checkbox 'xpath://div//input[@id="sunday"]'.</msg>
+<arg>xpath://div//input[@id="sunday"]</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-14T18:53:43.304008" elapsed="0.083599"/>
+</kw>
+<kw name="Select Checkbox" owner="SeleniumLibrary">
+<msg time="2025-02-14T18:53:43.387933" level="INFO">Selecting checkbox 'xpath://div//input[@id="saturday"]'.</msg>
+<arg>xpath://div//input[@id="saturday"]</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-14T18:53:43.387783" elapsed="0.042876"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2025-02-14T18:53:43.430944" level="INFO">Selecting options from selection list 'xpath://select[@id="country"]' by value china.</msg>
+<arg>xpath://select[@id="country"]</arg>
+<arg>china</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2025-02-14T18:53:43.430823" elapsed="0.034004"/>
+</kw>
+<kw name="Select From List By Index" owner="SeleniumLibrary">
+<msg time="2025-02-14T18:53:43.465112" level="INFO">Selecting options from selection list 'xpath://select[@id="colors"]' by indexes 2, 4.</msg>
+<arg>xpath://select[@id="colors"]</arg>
+<arg>2</arg>
+<arg>4</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<status status="PASS" start="2025-02-14T18:53:43.464983" elapsed="0.088313"/>
+</kw>
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2025-02-14T18:53:43.553678" level="INFO">Selecting options from selection list 'xpath://select[@id="animals"]' by labels Fox, Deer.</msg>
+<arg>xpath://select[@id="animals"]</arg>
+<arg>Fox</arg>
+<arg>Deer</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2025-02-14T18:53:43.553455" elapsed="0.052700"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-14T18:53:43.606535" level="INFO">Typing text '02-14-25' into text field 'xpath://input[@id="datepicker"]'.</msg>
+<arg>xpath://input[@id="datepicker"]</arg>
+<arg>${DATA_SISTEMA}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-14T18:53:43.606394" elapsed="0.064909"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-14T18:53:43.671789" level="INFO">Clicking element '//input[@name="SelectedDate"]'.</msg>
+<arg>//input[@name="SelectedDate"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-14T18:53:43.671655" elapsed="0.054191"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2025-02-14T18:53:43.726212" level="INFO">Selecting options from selection list '//select[@data-handler="selectMonth"]' by value 3.</msg>
+<arg>//select[@data-handler="selectMonth"]</arg>
 <arg>3</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-02-11T21:35:57.937810" elapsed="3.003234"/>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2025-02-14T18:53:43.726091" elapsed="0.041202"/>
 </kw>
-<kw name="Page Should Contain Image" owner="SeleniumLibrary">
-<msg time="2025-02-11T21:36:00.954489" level="INFO">Current page contains image '//img[@src="/web/images/orangehrm-logo.png?v=1721393199309"]'.</msg>
-<arg>//img[@src="/web/images/orangehrm-logo.png?v=1721393199309"]</arg>
-<doc>Verifies image identified by ``locator`` is found from current page.</doc>
-<status status="PASS" start="2025-02-11T21:36:00.941694" elapsed="0.012863"/>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2025-02-14T18:53:43.767628" level="INFO">Selecting options from selection list '//select[@data-handler="selectYear"]' by value 2024.</msg>
+<arg>//select[@data-handler="selectYear"]</arg>
+<arg>2024</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2025-02-14T18:53:43.767454" elapsed="0.037384"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-14T18:53:43.805119" level="INFO">Clicking element '//a[@data-date="15"]'.</msg>
+<arg>//a[@data-date="15"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-14T18:53:43.804993" elapsed="0.040640"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-14T18:53:43.846035" level="INFO">Typing text '02-14-25' into text field '//input[@id="start-date"]'.</msg>
+<arg>//input[@id="start-date"]</arg>
+<arg>${DATA_SISTEMA}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-14T18:53:43.845874" elapsed="0.043339"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-14T18:53:43.889751" level="INFO">Typing text '02-14-25' into text field '//input[@id="end-date"]'.</msg>
+<arg>//input[@id="end-date"]</arg>
+<arg>${DATA_SISTEMA}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-14T18:53:43.889380" elapsed="0.038438"/>
+</kw>
+<kw name="Choose File" owner="SeleniumLibrary">
+<msg time="2025-02-14T18:53:43.928187" level="INFO">Sending /Users/noesis/PROJETOS/APPS/robot-web-tests/robotWeb/efb18d9f-a1e6-4646-9262-2b882d34cd72.jpeg to browser.</msg>
+<arg>//input[@id="singleFileInput"]</arg>
+<arg>${EXECDIR}/efb18d9f-a1e6-4646-9262-2b882d34cd72.jpeg</arg>
+<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
+<status status="PASS" start="2025-02-14T18:53:43.928031" elapsed="0.039236"/>
+</kw>
+<kw name="Choose File" owner="SeleniumLibrary">
+<msg time="2025-02-14T18:53:43.967626" level="INFO">Sending /Users/noesis/PROJETOS/APPS/robot-web-tests/robotWeb/efb18d9f-a1e6-4646-9262-2b882d34cd72.jpeg to browser.</msg>
+<arg>//input[@id="multipleFilesInput"]</arg>
+<arg>${EXECDIR}/efb18d9f-a1e6-4646-9262-2b882d34cd72.jpeg</arg>
+<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
+<status status="PASS" start="2025-02-14T18:53:43.967450" elapsed="0.014253"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${DATA_SISTEMA}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-02-14T18:53:43.981911" elapsed="0.000178"/>
 </kw>
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2025-02-11T21:36:01.150768" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-02-14T18:53:44.143108" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-71.png"&gt;&lt;img src="selenium-screenshot-71.png" width="800px"&gt;&lt;/a&gt;</msg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2025-02-11T21:36:00.954748" elapsed="0.196087"/>
-</kw>
-<status status="PASS" start="2025-02-11T21:35:50.766004" elapsed="10.384936"/>
-</kw>
-<kw name="Click Link" owner="SeleniumLibrary">
-<msg time="2025-02-11T21:36:01.151232" level="INFO">Clicking link '//a[@href="/web/index.php/admin/viewAdminModule"]'.</msg>
-<arg>//a[@href="/web/index.php/admin/viewAdminModule"]</arg>
-<doc>Clicks a link identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-11T21:36:01.151117" elapsed="0.604475"/>
+<status status="PASS" start="2025-02-14T18:53:43.982172" elapsed="0.161001"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-02-11T21:36:04.758857" level="INFO">Slept 3 seconds.</msg>
-<arg>3</arg>
+<msg time="2025-02-14T18:53:54.145078" level="INFO">Slept 10 seconds.</msg>
+<arg>10</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-02-11T21:36:01.755810" elapsed="3.004765"/>
+<status status="PASS" start="2025-02-14T18:53:44.143299" elapsed="10.003145"/>
 </kw>
-<kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2025-02-11T21:36:04.805378" level="INFO">Element '//h6[text()="User Management"]' is displayed.</msg>
-<arg>//h6[text()="User Management"]</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2025-02-11T21:36:04.762799" elapsed="0.042656"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-02-11T21:36:07.806112" level="INFO">Slept 3 seconds.</msg>
-<arg>3</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-02-11T21:36:04.805677" elapsed="3.000571"/>
-</kw>
-<tag>logar</tag>
-<status status="PASS" start="2025-02-11T21:35:50.765712" elapsed="17.041441"/>
+<tag>form</tag>
+<status status="PASS" start="2025-02-14T18:53:38.233596" elapsed="15.914831"/>
 </test>
-<status status="PASS" start="2025-02-11T21:35:50.668401" elapsed="17.139934"/>
+<status status="PASS" start="2025-02-14T18:53:38.148527" elapsed="16.001331"/>
 </suite>
 <statistics>
 <total>
 <stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="1" fail="0" skip="0">logar</stat>
+<stat pass="1" fail="0" skip="0">form</stat>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Start">Start</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Formulario">Formulario</stat>
 </suite>
 </statistics>
 <errors>
